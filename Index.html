@@ -1,171 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kenya Beyond Travel & Tours</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f3e8;
-      color: #222;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    header {
-      background: #173f35;
-      color: white;
-      padding: 25px 15px;
-      text-align: center;
-    }
+<title>Kenya Beyond Travel & Tours</title>
 
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    header p {
-      margin: 8px 0 0;
-      font-size: 16px;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f3e8;
+  color: #222;
+}
 
-    .hero {
-      padding: 70px 20px;
-      text-align: center;
-      background: #d9c59a;
-    }
+header {
+  background: #173f35;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
 
-    .hero h2 {
-      font-size: 38px;
-      margin: 0 0 15px;
-    }
+header h1 {
+  margin: 0;
+  font-size: 30px;
+}
 
-    .hero p {
-      font-size: 19px;
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.6;
-    }
+header p {
+  margin: 8px 0 0;
+}
 
-    .button {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 25px;
-      background: #b47724;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
+/* HERO */
+.hero {
+  min-height: 75vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1600&q=85")
+    center/cover no-repeat;
 
-    section {
-      padding: 45px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 40px 20px;
+}
 
-    section h2 {
-      text-align: center;
-      color: #173f35;
-      font-size: 30px;
-    }
+.hero-content {
+  max-width: 850px;
+}
 
-    .package {
-      background: white;
-      padding: 25px;
-      margin-top: 25px;
-      border-radius: 10px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-    }
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
 
-    .package h3 {
-      color: #b47724;
-      font-size: 25px;
-    }
+.hero p {
+  font-size: 20px;
+  line-height: 1.6;
+}
 
-    .package p {
-      line-height: 1.7;
-    }
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 28px;
+  background: #b47724;
+  color: white;
+  text-decoration: none;
+  border-radius: 7px;
+  font-weight: bold;
+}
 
-    footer {
-      background: #173f35;
-      color: white;
-      text-align: center;
-      padding: 30px 15px;
-    }
+/* SECTIONS */
+section {
+  padding: 55px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-    footer a {
-      color: white;
-    }
+section h2 {
+  text-align: center;
+  color: #173f35;
+  font-size: 32px;
+  margin-bottom: 35px;
+}
 
-    @media (max-width: 600px) {
-      .hero h2 {
-        font-size: 30px;
-      }
+/* WILDLIFE */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
 
-      header h1 {
-        font-size: 25px;
-      }
-    }
-  </style>
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 0 20px;
+  color: #173f35;
+}
+
+.card p {
+  padding: 0 20px 20px;
+  line-height: 1.6;
+}
+
+/* PACKAGES */
+.packages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.package {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.package h3 {
+  color: #b47724;
+  font-size: 25px;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+  background: #e8dfca;
+  max-width: none;
+}
+
+.contact p {
+  line-height: 2;
+  font-size: 18px;
+}
+
+.contact a {
+  color: #173f35;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  background: #173f35;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero h2 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .gallery,
+  .packages {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 25px;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <h1>Kenya Beyond Travel & Tours</h1>
-  <p>Discover Kenya. Experience the Wild.</p>
+  <p>Discover Kenya • Experience the Wild</p>
 </header>
 
+<!-- HERO -->
 <div class="hero">
-  <h2>Unforgettable Kenyan Safari Adventures</h2>
-  <p>
-    Explore Kenya with unforgettable safari experiences,
-    from the magnificent Maasai Mara to beautiful destinations
-    across the country.
-  </p>
 
-  <a class="button" href="https://wa.me/254729029717">
-    Book Your Safari on WhatsApp
-  </a>
-</div>
+  <div class="hero-content">
 
-<section>
-  <h2>Our Safari Package</h2>
-
-  <div class="package">
-    <h3>Maasai Mara Safari</h3>
-    <p>
-      Experience the breathtaking Maasai Mara, home to incredible
-      wildlife, beautiful landscapes and unforgettable African sunsets.
-    </p>
+    <h2>Experience the Magic of Kenya</h2>
 
     <p>
-      We offer carefully planned safari experiences suitable for
-      both luxury and budget travelers.
+      Discover unforgettable safari adventures,
+      breathtaking landscapes and incredible wildlife
+      with Kenya Beyond Travel & Tours.
     </p>
 
     <a class="button" href="https://wa.me/254729029717">
-      Enquire Now
+      Book Your Safari
     </a>
+
   </div>
+
+</div>
+
+<!-- WILDLIFE -->
+<section>
+
+<h2>Discover Kenya's Wildlife</h2>
+
+<div class="gallery">
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1000&q=80" alt="Lion in Kenya">
+    <h3>The Big Five</h3>
+    <p>
+      Get close to Africa's most spectacular wildlife
+      on an unforgettable Kenyan safari.
+    </p>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=1000&q=80" alt="Elephant safari">
+    <h3>Elephant Adventures</h3>
+    <p>
+      Witness majestic elephants in their natural
+      African environment.
+    </p>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1000&q=80" alt="African giraffe">
+    <h3>Beautiful Landscapes</h3>
+    <p>
+      Enjoy spectacular views, wildlife and unforgettable
+      African sunsets.
+    </p>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=80" alt="Kenya safari">
+    <h3>Safari Experiences</h3>
+    <p>
+      Explore Kenya with experienced planning and
+      memorable safari experiences.
+    </p>
+  </div>
+
+</div>
+
 </section>
 
+<!-- MAASAI MARA -->
 <section>
-  <h2>Contact Us</h2>
 
-  <p style="text-align:center; line-height:2;">
-    <strong>Kenya Beyond Travel & Tours</strong><br>
-    WhatsApp: <a href="https://wa.me/254729029717">+254 729 029 717</a><br>
-    Email: <a href="mailto:kipkiruibenard4465@gmail.com">
-      kipkiruibenard4465@gmail.com
-    </a>
-  </p>
+<h2>Maasai Mara Safari</h2>
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?auto=format&fit=crop&w=1400&q=85"
+alt="Maasai Mara safari"
+style="height:400px;"
+>
+
+<div style="padding:25px;">
+
+<h3>Adventure Into The Wild</h3>
+
+<p>
+Experience the world-famous Maasai Mara,
+one of Kenya's most spectacular wildlife destinations.
+Enjoy game drives, beautiful landscapes and unforgettable
+African sunsets.
+</p>
+
+<a class="button" href="https://wa.me/254729029717">
+Enquire About Maasai Mara
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TRAVEL OPTIONS -->
+<section>
+
+<h2>Travel Your Way</h2>
+
+<div class="packages">
+
+<div class="package">
+
+<h3>Luxury Safaris</h3>
+
+<p>
+Enjoy premium accommodation, private experiences,
+excellent service and unforgettable wildlife adventures.
+</p>
+
+<a class="button" href="https://wa.me/254729029717">
+Luxury Enquiry
+</a>
+
+</div>
+
+<div class="package">
+
+<h3>Budget Safaris</h3>
+
+<p>
+Explore Kenya affordably while still enjoying amazing
+wildlife, comfortable stays and memorable safari experiences.
+</p>
+
+<a class="button" href="https://wa.me/254729029717">
+Budget Enquiry
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+
+<h2>Start Your Kenyan Adventure</h2>
+
+<p>
+<strong>Kenya Beyond Travel & Tours</strong><br><br>
+
+WhatsApp:
+<a href="https://wa.me/254729029717">
++254 729 029 717
+</a>
+<br>
+
+Email:
+<a href="mailto:kipkiruibenard4465@gmail.com">
+kipkiruibenard4465@gmail.com
+</a>
+</p>
+
+<a class="button" href="https://wa.me/254729029717">
+Chat With Us on WhatsApp
+</a>
+
 </section>
 
 <footer>
-  <p>© 2026 Kenya Beyond Travel & Tours</p>
-  <p>Luxury & Budget Safari Adventures in Kenya</p>
+
+<p>
+© 2026 Kenya Beyond Travel & Tours
+</p>
+
+<p>
+Luxury & Budget Safari Adventures in Kenya
+</p>
+
 </footer>
 
 </body>
